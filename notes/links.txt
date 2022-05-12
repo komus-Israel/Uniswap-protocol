@@ -1,0 +1,7 @@
+// glossary
+
+https://docs.uniswap.org/protocol/concepts/V3-overview/glossary
+
+//  beginners guide to v2
+
+https://ethereum.org/en/developers/tutorials/uniswap-v2-annotated-code/
