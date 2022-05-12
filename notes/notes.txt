@@ -1,7 +1,12 @@
 There are 2 types of traders
 
-1.  Liquidity Providers: they provide the pool with the token pairs that can be exchanged (token0 and token1)
-2.  Traders
+1.  Liquidity Providers: they provide the pool with the two token pairs that can be exchanged (token0 and token1). They get a 3rd token
+    in return called Liquidity Token.
+
+2.  Traders: They supply a token to the pool and gets another in exchange (send token0 and receive token1)
 
 Uniswap helps to create trades between ERC20 token pairs
+
+
+
 
