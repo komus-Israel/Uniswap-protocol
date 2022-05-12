@@ -1,4 +1,9 @@
-There are 2 types of traders
+// reference to the note 
+
+https://ethereum.org/en/developers/tutorials/uniswap-v2-annotated-code/
+
+
+[*] There are 2 types of traders
 
 1.  Liquidity Providers: they provide the pool with the two token pairs that can be exchanged (token0 and token1). They get a 3rd token
     in return called Liquidity Token.
@@ -6,6 +11,22 @@ There are 2 types of traders
 2.  Traders: They supply a token to the pool and gets another in exchange (send token0 and receive token1)
 
 Uniswap helps to create trades between ERC20 token pairs
+
+[*] Core Contracts vs Periphery contracts 
+
+Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts, which hold 
+the assets and therefore have to be secure, to be simpler and easier to audit. All the extra functionality required by 
+traders can then be provided by periphery contracts.
+
+
+[*] Data Flow and Control Flow 
+
+
+This is the flow of data and control that happens when you perform the three main actions of Uniswap:
+
+1.  Swap between different tokens
+2.  Add liquidity to the market and get rewarded with pair exchange ERC-20 liquidity tokens
+3.  Burn ERC-20 liquidity tokens and get back the ERC-20 tokens that the pair exchange allows traders to exchange
 
 
 
