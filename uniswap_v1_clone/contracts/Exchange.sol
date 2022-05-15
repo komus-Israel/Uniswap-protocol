@@ -20,6 +20,7 @@ contract Exchange {
 
     constructor (address _tokenAddress) {
 
+        require(_tokenAddress != address(0), "token can't be zero address");
         tokenAddress = _tokenAddress;
 
     }
