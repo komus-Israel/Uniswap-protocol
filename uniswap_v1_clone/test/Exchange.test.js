@@ -27,4 +27,16 @@ contract ("Exchange", ([lister1])=>{
 
     })
 
+    describe("registered token address", ()=>{
+
+        it("should return the token address for the exchange", async()=>{
+
+            const returnedTokenAddress = await komusExchange.getTokenAddress()
+
+            returnedTokenAddress.should.be.equal(komusToken.address, "it returns the address of the registered token in the exchange contract")
+
+        })
+
+    })
+
 })
