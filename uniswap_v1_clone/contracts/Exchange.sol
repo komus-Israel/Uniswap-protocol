@@ -44,4 +44,15 @@ contract Exchange {
 
     }
 
+
+    /**
+        @dev    function to get the quantity of token reserve in the exchange contract
+     */
+
+     function getReserve() external view returns (uint256) {
+
+        return IERC20(tokenAddress).balanceOf(address(this));
+
+     }
+
 }
