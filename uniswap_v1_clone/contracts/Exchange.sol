@@ -32,4 +32,16 @@ contract Exchange {
 
     }
 
+    /**
+        *   @dev    function to add liquidity to the exchange contract.
+
+            Ether and token is deposited to the contract to provide liquidity   
+     */
+
+    function addLiquidity(uint256 _tokenAmount) external payable {
+
+        IERC20(tokenAddress).transferFrom(msg.sender, address(this), _tokenAmount);
+
+    }
+
 }
