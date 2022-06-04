@@ -49,10 +49,22 @@ contract Exchange {
         @dev    function to get the quantity of token reserve in the exchange contract
      */
 
-     function getReserve() external view returns (uint256) {
+    function getReserve() external view returns (uint256) {
 
         return IERC20(tokenAddress).balanceOf(address(this));
 
-     }
+    }
+
+    /**
+        @dev function to get the amount of tokens to get in exchange for trading a token. It is the output amount
+        This amount is calculated using the AMM model
+    */
+
+    function getTokenAmount(uint256 _inputAmount, uint256 _inputReserve, uint256 _outputReserve) internal returns (uint256) {
+
+        require(_inputReserve && _outputReserver != 0, "invalid reserve");
+        return ((_outputReserve * _inputAmount) / (_inputReserve + _inputAmount));
+
+    }
 
 }
