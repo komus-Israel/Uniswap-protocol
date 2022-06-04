@@ -60,11 +60,26 @@ contract Exchange {
         This amount is calculated using the AMM model
     */
 
-    function getTokenAmount(uint256 _inputAmount, uint256 _inputReserve, uint256 _outputReserve) internal pure returns (uint256) {
+    function getAmount(uint256 _inputAmount, uint256 _inputReserve, uint256 _outputReserve) internal pure returns (uint256) {
 
-        require(_inputReserve && _outputReserver != 0, "invalid reserve");
+        require((_inputReserve != 0 && _outputReserve != 0), "invalid reserve");
         return ((_outputReserve * _inputAmount) / (_inputReserve + _inputAmount));
 
     }
+
+    function getEtherAmount(uint256 _inputTokenAmount) external view returns (uint256) {
+        
+        uint256 tokenReserve = getReserve();
+        return getAmount(_inputTokenAmount, tokenReserve, address(this).balance);
+
+    }
+
+    function getTokenAmount(uint256 _inputEtherAmount) external view returns (uint256) {
+        
+
+
+    }
+
+
 
 }
